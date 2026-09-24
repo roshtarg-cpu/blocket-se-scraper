@@ -1,67 +1,38 @@
 {
-  "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
-  "actorSpecification": 1,
-  "fields": {
+  "title": "Blocket.se Scraper Dataset",
+  "type": "object",
+  "properties": {
     "url": {
       "type": "string",
-      "title": "Listing URL"
+      "description": "Listing URL"
     },
     "itemId": {
       "type": "string",
-      "title": "Blocket Item ID"
+      "description": "Blocket Item ID"
     },
     "title": {
       "type": "string",
-      "title": "Listing Title"
+      "description": "Listing title"
     },
     "price": {
       "type": "integer",
-      "title": "Price (SEK)"
+      "description": "Price in SEK"
     },
     "priceText": {
       "type": "string",
-      "title": "Price Text"
+      "description": "Price text"
     },
     "location": {
       "type": "string",
-      "title": "Location"
+      "description": "Location"
     },
     "imageUrl": {
       "type": "string",
-      "title": "Image URL"
+      "description": "Image URL"
     },
     "scrapedAt": {
       "type": "string",
-      "title": "Scraped At (ISO 8601)"
-    }
-  },
-  "views": {
-    "overview": {
-      "title": "Overview",
-      "transformation": {
-        "fields": ["title", "price", "location", "url"]
-      },
-      "display": {
-        "component": "table",
-        "properties": {
-          "title": {
-            "label": "Title",
-            "format": "text"
-          },
-          "price": {
-            "label": "Price (SEK)",
-            "format": "number"
-          },
-          "location": {
-            "label": "Location",
-            "format": "text"
-          },
-          "url": {
-            "label": "URL",
-            "format": "link"
-          }
-        }
-      }
+      "description": "Timestamp"
     }
   }
 }
