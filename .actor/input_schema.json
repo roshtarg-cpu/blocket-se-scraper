@@ -1,0 +1,62 @@
+{
+  "title": "Blocket.se Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchQuery": {
+      "title": "Search Query",
+      "type": "string",
+      "description": "Search term (e.g. 'cykel', 'bil', 'möbler'). Leave empty to browse all listings.",
+      "editor": "textfield",
+      "prefill": "cykel"
+    },
+    "location": {
+      "title": "Location",
+      "type": "string",
+      "description": "Geographic area in Sweden. Examples: 'hela_sverige' (all Sweden), 'stockholm', 'goteborg', 'malmo', 'uppsala'",
+      "editor": "textfield",
+      "prefill": "hela_sverige"
+    },
+    "category": {
+      "title": "Category",
+      "type": "string",
+      "description": "Blocket category ID (e.g. '0.69' for Sport, '0.78' for Furniture). Leave empty for all categories.",
+      "editor": "textfield",
+      "prefill": ""
+    },
+    "minPrice": {
+      "title": "Minimum Price (SEK)",
+      "type": "integer",
+      "description": "Filter results by minimum price in Swedish Kronor",
+      "editor": "number",
+      "prefill": 0
+    },
+    "maxPrice": {
+      "title": "Maximum Price (SEK)",
+      "type": "integer",
+      "description": "Filter results by maximum price in Swedish Kronor",
+      "editor": "number",
+      "prefill": 10000
+    },
+    "maxResults": {
+      "title": "Maximum Results",
+      "type": "integer",
+      "description": "Maximum number of listings to scrape",
+      "editor": "number",
+      "prefill": 3,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Residential proxy recommended for reliable access",
+      "editor": "proxy",
+      "prefill": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": ["RESIDENTIAL"]
+      }
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
+  "actorSpecification": 1,
+  "fields": {
+    "url": {
+      "type": "string",
+      "title": "Listing URL"
+    },
+    "itemId": {
+      "type": "string",
+      "title": "Blocket Item ID"
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "price": {
+      "type": "integer",
+      "title": "Price (SEK)"
+    },
+    "priceText": {
+      "type": "string",
+      "title": "Price Text"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location"
+    },
+    "imageUrl": {
+      "type": "string",
+      "title": "Image URL"
+    },
+    "scrapedAt": {
+      "type": "string",
+      "title": "Scraped At (ISO 8601)"
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["title", "price", "location", "url"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": {
+            "label": "Title",
+            "format": "text"
+          },
+          "price": {
+            "label": "Price (SEK)",
+            "format": "number"
+          },
+          "location": {
+            "label": "Location",
+            "format": "text"
+          },
+          "url": {
+            "label": "URL",
+            "format": "link"
+          }
+        }
+      }
+    }
+  }
+}

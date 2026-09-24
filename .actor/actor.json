@@ -1,0 +1,13 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "blocket-se-scraper",
+  "title": "Blocket.se Scraper - Swedish Classifieds Ads",
+  "version": "1.0",
+  "inputSchema": "./.actor/input_schema.json",
+  "outputSchema": "./.actor/output_schema.json",
+  "storages": {
+    "dataset": "./.actor/dataset_schema.json"
+  },
+  "dockerfile": "./Dockerfile"
+}
