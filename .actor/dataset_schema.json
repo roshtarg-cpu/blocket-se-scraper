@@ -1,4 +1,5 @@
 {
+  "actorSpecification": 1,
   "title": "Blocket.se Scraper Dataset",
   "type": "object",
   "properties": {
