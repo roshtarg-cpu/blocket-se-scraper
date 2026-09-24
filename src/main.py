@@ -145,10 +145,10 @@ async def main():
         
         # Save task metadata
         await Actor.set_value('SAVED-TASK', {
-            'actorId': env.actor_id,
-            'actorRunId': env.actor_run_id,
-            'defaultDatasetId': env.default_dataset_id,
-            'startedAt': env.started_at.isoformat() if env.started_at else None,
+            'actorId': env.get('actorId'),
+            'actorRunId': env.get('actorRunId'),
+            'defaultDatasetId': env.get('defaultDatasetId'),
+            'startedAt': env.get('startedAt'),
             'input': actor_input,
             'stats': {
                 'itemsScraped': items_scraped
