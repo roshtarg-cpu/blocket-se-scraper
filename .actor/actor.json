@@ -4,10 +4,10 @@
   "name": "blocket-se-scraper",
   "title": "Blocket.se Scraper - Swedish Classifieds Ads",
   "version": "1.0",
-  "inputSchema": "./.actor/input_schema.json",
-  "outputSchema": "./.actor/output_schema.json",
+  "inputSchema": "./input_schema.json",
+  "outputSchema": "./output_schema.json",
   "storages": {
-    "dataset": "./.actor/dataset_schema.json"
+    "dataset": "./dataset_schema.json"
   },
   "dockerfile": "./Dockerfile"
 }
