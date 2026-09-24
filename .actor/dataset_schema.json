@@ -12,7 +12,7 @@
     },
     "title": {
       "type": "string",
-      "title": "Title"
+      "title": "Listing Title"
     },
     "price": {
       "type": "integer",
