@@ -93,9 +93,10 @@ async def main():
                         
                         price = None
                         if price_text:
-                            price_match = re.search(r'([\d\s]+)\s*kr', price_text)
+                            price_match = re.search(r'([\d\s\xa0]+)\s*kr', price_text)
                             if price_match:
-                                price = int(price_match.group(1).replace(' ', ''))
+                                # Remove spaces and non-breaking spaces (Swedish number format)
+                                price = int(price_match.group(1).replace(' ', '').replace('\xa0', ''))
                         
                         # Extract location (city name)
                         location_text = None
