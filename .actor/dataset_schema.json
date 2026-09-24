@@ -1,39 +1,62 @@
 {
   "actorSpecification": 1,
-  "title": "Blocket.se Scraper Dataset",
-  "type": "object",
-  "properties": {
+  "fields": {
     "url": {
       "type": "string",
-      "description": "Listing URL"
+      "title": "Listing URL"
     },
     "itemId": {
       "type": "string",
-      "description": "Blocket Item ID"
+      "title": "Item ID"
     },
     "title": {
       "type": "string",
-      "description": "Listing title"
+      "title": "Listing Title"
     },
     "price": {
       "type": "integer",
-      "description": "Price in SEK"
+      "title": "Price (SEK)"
     },
     "priceText": {
       "type": "string",
-      "description": "Price text"
+      "title": "Price Text"
     },
     "location": {
       "type": "string",
-      "description": "Location"
+      "title": "Location"
     },
     "imageUrl": {
       "type": "string",
-      "description": "Image URL"
+      "title": "Image URL"
     },
     "scrapedAt": {
       "type": "string",
-      "description": "Timestamp"
+      "title": "Scraped At"
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["title", "price", "location"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": {
+            "label": "Title",
+            "format": "text"
+          },
+          "price": {
+            "label": "Price",
+            "format": "number"
+          },
+          "location": {
+            "label": "Location",
+            "format": "text"
+          }
+        }
+      }
     }
   }
 }
